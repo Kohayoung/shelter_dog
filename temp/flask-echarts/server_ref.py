@@ -1,10 +1,21 @@
-#이미지 클릭 시 그래프 출력
+from pyecharts import Bar
 from pyecharts import Bar3D
 from pyecharts_javascripthon.api import TRANSLATOR
 from flask import Flask, escape, request, render_template
 import requests
+from decouple import config
+
+#%matplotlib inline
 import pandas as pd
-# import matplotlib as mpl
+import matplotlib as mpl
+
+
+#파일 저장
+import os
+
+#unescape 사용하기 위함
+import html
+
 
 REMOTE_HOST = "https://pyecharts.github.io/assets/js"
 
@@ -12,9 +23,10 @@ app = Flask(__name__)
 
 #구별 년도별 인구수가 들어간 리스트
 data_3d_person_list=[]
+df_year=[]
+df_region=[]
 df_year_list = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
 df_region_list =['종로구', '중구', '용산구', '성동구', '광진구', '동대문구', '중랑구', '성북구', '강북구', '도봉구', '노원구', '은평구', '서대문구', '마포구', '양천구', '강서구', '구로구', '금천구', '영등포구', '동작구', '관악구', '서초구', '강남구', '송파구', '강동구']
-
 
 @app.route("/")
 def hello():
@@ -40,6 +52,36 @@ def getDataList():
     return data_list
 
 data_3d_person_list = getDataList()
+
+def label_formatter(params):
+    vals = params.value
+    year_idx=vals[0]
+    region_idx=vals[1]
+    df_year_list2 = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+    # df_region_list2 =["종로구", "중구", "용산구", "성동구", "광진구", '동대문구', '중랑구', '성북구', '강북구', '도봉구', '노원구', '은평구', '서대문구', '마포구', '양천구', '강서구', '구로구', '금천구', '영등포구', '동작구', '관악구', '서초구', '강남구', '송파구', '강동구']
+    df_region_list2 ={{df_region_list}}
+    re_year = df_year_list2[year_idx]
+    re_region = df_region_list2[region_idx]
+    result_str=[]
+    #result_str = '년도:'+str(re_year)+', 자치구:'+str(re_region)+', 유기견 수:'+vals[2]
+    # header_str = '''
+    #             <div>
+    #               <span>구별 유기견 수</span>
+    #               <br>
+    #             '''
+    # result_str = header_str + params.marker + '<br>' + '- 년도 : '+re_year+'<br>'+'- 자치구 : '+re_region+' <br>'+'- 유기견 수 : '+vals[2]+'마리 <br></div>'
+    return result_str
+
+def label_formatter2(params):
+    return getLabels(params)
+
+
+def bar_chart():
+    bar = Bar("1번째", "2번째")
+    bar.add(
+        "위 제목", ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"], [5, 20, 36, 10, 75, 90]
+    )
+    return bar
 
 
 def bar_3d_chart():
@@ -86,7 +128,7 @@ def bar_3d_chart():
         
         #tooltip 설정
         tooltip_trigger='item',
-        tooltip_formatter=label_formatter
+        tooltip_formatter=label_formatter2
     )
 
     #이건 전체 표출되는 화면 크기
@@ -95,8 +137,12 @@ def bar_3d_chart():
 
     return bar3d
 
-def label_formatter(params):
-    return getLabels(params)
+
+
+
+
+
+
 
 if __name__=='__main__':
     app.run(debug=True)
