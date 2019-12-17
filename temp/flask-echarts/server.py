@@ -32,6 +32,11 @@ def hello():
         script_list=_bar.get_js_dependencies(),
     )
 
+
+@app.route("/md")
+def materialDesign():
+    return render_template('md_index.html')
+
 def getDataList():
     data_list=[]
     df_3dp = pd.read_csv('for_3dPerson_data.csv')
