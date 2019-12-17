@@ -14,8 +14,13 @@
     <script type="text/javascript">
         window.onload = function() {
             setTimeout(function() {
+
+              // console.log('chart_id : ',{{ chart_id }} )
+
                 var myChart_{{ chart_id }} = echarts.init(document.getElementById('{{ chart_id }}'), null, {renderer: '{{ renderer}}'});
                 {{ custom_function }}
+
+                // console.log('myCahrt_{{ chart_id }}')
                 var option_{{ chart_id }} = {{ options | safe }};
                 myChart_{{ chart_id }}.setOption(option_{{ chart_id }});
                 window.onresize = function() {
@@ -23,6 +28,24 @@
                 };
             }, 1000);
         };
+
+        function getLabels(params){
+          vals = params.value
+          year_idx=vals[0]
+          region_idx=vals[1]
+          df_year_list2 = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+          df_region_list2 =["종로구", "중구", "용산구", "성동구", "광진구", '동대문구', '중랑구', '성북구', '강북구', '도봉구', '노원구', '은평구', '서대문구', '마포구', '양천구', '강서구', '구로구', '금천구', '영등포구', '동작구', '관악구', '서초구', '강남구', '송파구', '강동구']
+          re_year = df_year_list2[year_idx]
+          re_region = df_region_list2[region_idx]
+          result_str=[]
+          // result_str = '년도:'+str(re_year)+', 자치구:'+str(re_region)+', 유기견 수:'+vals[2]
+          header_str = '<div>'
+                       +'  <span>구별 유기견 수</span>'
+                       +'  <br>'
+                       
+          result_str = header_str + params.marker + '<br>' + '- 년도 : '+re_year+'<br>'+'- 자치구 : '+re_region+' <br>'+'- 유기견 수 : '+vals[2]+'마리 <br></div>'
+          return result_str
+        }
     </script>
 </body>
 
