@@ -43,7 +43,7 @@ def materialDesign():
         host=REMOTE_HOST,
         renderer=_bar.renderer,
         my_width="100%",
-        my_height=1000,
+        my_height=800,
         custom_function=javascript_snippet.function_snippet,
         options=javascript_snippet.option_snippet,
         script_list=_bar.get_js_dependencies(),
@@ -51,7 +51,7 @@ def materialDesign():
 
 def getDataList():
     data_list=[]
-    df_3dp = pd.read_csv('for_3dPerson_data.csv')
+    df_3dp = pd.read_csv('dogcnt_for_3d.csv')
     for i in range(len(df_3dp)):
         data_list.append(list(df_3dp.loc[i]))
     return data_list
