@@ -1,0 +1,414 @@
+<!--
+ =========================================================
+ * Material Kit - v2.0.6
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-kit
+ * Copyright 2019 Creative Tim (http://www.creative-tim.com)
+   Licensed under MIT (https://github.com/creativetimofficial/material-kit/blob/master/LICENSE.md)
+
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    서울시 유기견 분석
+  </title>
+  {% for jsfile_name in script_list %}
+    <script src="{{ host }}/{{ jsfile_name }}.js"></script>
+  {% endfor %}
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="/static/assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/static/assets/demo/demo.css" rel="stylesheet" />
+  
+</head>
+
+<body class="index-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+          Shelter Dog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#first_con" >
+              <i class="material-icons">announcement</i> 분석목적&배경
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#second_con" >
+              <i class="material-icons">assessment</i> 분석 과정
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#third_con" >
+              <i class="material-icons">description</i> 분석 결과
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('/static/assets/img/bg2.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand">
+            <h1>서울시 유기견 현황 분석</h1>
+            <!-- <h3>A Badass Bootstrap 4 UI Kit based on Material Design.</h3> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised" id="first_con">
+    <div class="section section-basic">
+      <div class="container" >
+        <!-- <div class="title">
+          <h2>1. 분석 목적 & 배경</h2>
+        </div> -->
+        <div class="card card-nav-tabs">
+          <div class="card-header card-header-warning">
+            <h3>분석 목적 & 배경</h3>
+          </div>
+          <div class="card-body">
+            <!-- <h4 class="card-title">Special title treatment</h4> -->
+            <br>
+            <p class="card-text">
+              <h5>
+                오늘날 지구온난화의 영향으로 전세계의 기후변화 속도가 가속화되어 그에 따른 영향의 심각성이 더욱 대두되고 있습니다.
+                이에 서울시에서도 기후변화가 미치는 영향이 증가함에 따라 기후변화 취약지역 피해 저감을 위해 폭염 예경보 시스템과 감시체계 구축 및 폭염 취약계층 보호 및 관리에 노력하고 있습니다.
+                그 중 폭염 취약계층과 시민의 보호와 피해 관리를 위하여 실행·설치 된 폭염 그늘막은 2013년 전국 최초 동작구 설치 도입을 시작으로 시민들의 호응 속에 서울시는 각 자치구에 가이드라인을 배포(2017년 12월)하여 서울 전역을 대상으로 매년 설치가 확대되어 교통섬·횡단보도 590개소에 그늘막 쉼터를 설치 하였습니다.
+                하지만 ‘그늘막 설치 가이드라인’ 기준에도 불구하고 설치 장소의 지표면 온도와 폭염 취약계층 활동에 대한 고려가 원활하게 이루어지고 있지 않아, 그늘막 추가 설치를 예정하고 있는 중랑구 지역을 대상으로 폭염그늘막 우선순위 설치지역을 선정하기 위하여 폭염취약성을 분석 하였습니다.
+              </h5>
+
+            </p>
+            <!-- <a href="#0" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<br><br><br><br><br><br><br><br> 
+
+    <div class="section section-basic" id="second_con">
+      <div class="container" >
+        <div class="card card-nav-tabs" >
+          <div class="card-header card-header-info">
+            <h3>분석 과정</h3>
+          </div>
+          <div class="card-body">
+            <!-- <h4 class="card-title">Special title treatment</h4> -->
+            <br>
+            <p class="card-text">
+              <h5>
+                오늘날 지구온난화의 영향으로 전세계의 기후변화 속도가 가속화되어 그에 따른 영향의 심각성이 더욱 대두되고 있습니다.
+                이에 서울시에서도 기후변화가 미치는 영향이 증가함에 따라 기후변화 취약지역 피해 저감을 위해 폭염 예경보 시스템과 감시체계 구축 및 폭염 취약계층 보호 및 관리에 노력하고 있습니다.
+                그 중 폭염 취약계층과 시민의 보호와 피해 관리를 위하여 실행·설치 된 폭염 그늘막은 2013년 전국 최초 동작구 설치 도입을 시작으로 시민들의 호응 속에 서울시는 각 자치구에 가이드라인을 배포(2017년 12월)하여 서울 전역을 대상으로 매년 설치가 확대되어 교통섬·횡단보도 590개소에 그늘막 쉼터를 설치 하였습니다.
+                하지만 ‘그늘막 설치 가이드라인’ 기준에도 불구하고 설치 장소의 지표면 온도와 폭염 취약계층 활동에 대한 고려가 원활하게 이루어지고 있지 않아, 그늘막 추가 설치를 예정하고 있는 중랑구 지역을 대상으로 폭염그늘막 우선순위 설치지역을 선정하기 위하여 폭염취약성을 분석 하였습니다.
+              </h5>
+
+            </p>
+            <!-- <a href="#0" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-tabs">
+      <div class="container">
+        <!--                nav tabs	             -->
+        <div id="nav-tabs">
+          <h3>Navigation Tabs</h3>
+          <div class="row">
+            <div class="col-md-12">
+              <h3>
+                <small>Tabs with Icons on Card</small>
+              </h3>
+              <!-- Tabs with icons on Card -->
+              <div class="card card-nav-tabs">
+                <div class="card-header card-header-primary">
+                  <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#gd_fir" data-toggle="tab">
+                            <i class="material-icons">face</i> First
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#gd_sec" data-toggle="tab">
+                            <i class="material-icons">face</i> Second
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#gd_thi" data-toggle="tab">
+                            <i class="material-icons">face</i> Third
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#gd_fou" data-toggle="tab">
+                            <i class="material-icons">face</i> Third
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#gd_fif" data-toggle="tab">
+                            <i class="material-icons">face</i> Third
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body ">
+                  <div class="tab-content text-center">
+                    <div class="tab-pane active" id="gd_fir">
+                      <!-- <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p> -->
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Gradient Boosting</h4>
+                          <p class="card-text">Gradient Boosting를 이용해 어떤 요인들이 유기견 수에 지대한 영향을 미치는지 확인해보았다.</p>
+                          <p class="card-text">가장 많은 영향을 끼치는 요인은 70대 이상 사람의 수이다.</p>
+                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                        <img class="card-img-bottom" src="/static/graph/gd1.png" alt="Card image cap">
+                      </div>
+
+                    </div>
+                    <div class="tab-pane" id="gd_sec">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">Gradient Boosting</h4>
+                            <br>
+                            <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
+                            <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                          </div>
+                          <img class="card-img-bottom" src="/static/graph/gd2.png" alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="gd_thi">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Gradient Boosting</h4>
+                          <br>
+                          <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
+                          <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                        <img class="card-img-bottom" src="/static/graph/gd2.png" alt="Card image cap">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="gd_fou">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Gradient Boosting</h4>
+                          <br>
+                          <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
+                          <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                        <img class="card-img-bottom" src="/static/graph/gd2.png" alt="Card image cap">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="gd_fif">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Gradient Boosting</h4>
+                          <br>
+                          <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
+                          <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                        <!-- <img class="card-img-bottom" src="/static/graph/gd2.png" alt="Card image cap"> -->
+                        <div id="{{ chart_id }}" style="width:{{ my_width }};height:{{ my_height }}px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Tabs with icons on Card -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-basic" id="third_con">
+      <div class="container" >
+        <!-- <div class="title">
+          <h2>1. 분석 목적 & 배경</h2>
+        </div> -->
+        <div class="card card-nav-tabs">
+          <div class="card-header card-header-warning">
+            <h3>분석 결과</h3>
+          </div>
+          <div class="card-body">
+            <!-- <h4 class="card-title">Special title treatment</h4> -->
+            <br>
+            <p class="card-text">
+              <h5>
+                오늘날 지구온난화의 영향으로 전세계의 기후변화 속도가 가속화되어 그에 따른 영향의 심각성이 더욱 대두되고 있습니다.
+                이에 서울시에서도 기후변화가 미치는 영향이 증가함에 따라 기후변화 취약지역 피해 저감을 위해 폭염 예경보 시스템과 감시체계 구축 및 폭염 취약계층 보호 및 관리에 노력하고 있습니다.
+                그 중 폭염 취약계층과 시민의 보호와 피해 관리를 위하여 실행·설치 된 폭염 그늘막은 2013년 전국 최초 동작구 설치 도입을 시작으로 시민들의 호응 속에 서울시는 각 자치구에 가이드라인을 배포(2017년 12월)하여 서울 전역을 대상으로 매년 설치가 확대되어 교통섬·횡단보도 590개소에 그늘막 쉼터를 설치 하였습니다.
+                하지만 ‘그늘막 설치 가이드라인’ 기준에도 불구하고 설치 장소의 지표면 온도와 폭염 취약계층 활동에 대한 고려가 원활하게 이루어지고 있지 않아, 그늘막 추가 설치를 예정하고 있는 중랑구 지역을 대상으로 폭염그늘막 우선순위 설치지역을 선정하기 위하여 폭염취약성을 분석 하였습니다.
+              </h5>
+
+            </p>
+            <!-- <a href="#0" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Classic Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link">Nice Button</button>
+          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Modal -->
+  <footer class="footer" data-background-color="black">
+    <div class="container">
+      <nav class="float-left">
+        <ul>
+          <li>
+            <a href="https://www.creative-tim.com">
+              Creative Tim
+            </a>
+          </li>
+          <li>
+            <a href="https://creative-tim.com/presentation">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.creative-tim.com">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="https://www.creative-tim.com/license">
+              Licenses
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyright float-right">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, made with <i class="material-icons">favorite</i> by
+        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+      </div>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="/static/assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="/static/assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="/static/assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="/static/assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="/static/assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="/static/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="/static/assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      materialKit.initFormExtendedDatetimepickers();
+
+      // Sliders Init
+      materialKit.initSliders();
+
+      
+    });
+
+    window.onload = function() {
+            setTimeout(function() {
+
+              // console.log('chart_id : ',{{ chart_id }} )
+
+                var myChart_{{ chart_id }} = echarts.init(document.getElementById('{{ chart_id }}'), null, {renderer: '{{ renderer}}'});
+                {{ custom_function }}
+
+                // console.log('myCahrt_{{ chart_id }}')
+                var option_{{ chart_id }} = {{ options | safe }};
+                myChart_{{ chart_id }}.setOption(option_{{ chart_id }});
+                window.onresize = function() {
+                    myChart_{{ chart_id }}.resize();
+                };
+            }, 1000);
+        };
+
+        function getLabels(params){
+          vals = params.value
+          year_idx=vals[0]
+          region_idx=vals[1]
+          df_year_list2 = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+          df_region_list2 =["종로구", "중구", "용산구", "성동구", "광진구", '동대문구', '중랑구', '성북구', '강북구', '도봉구', '노원구', '은평구', '서대문구', '마포구', '양천구', '강서구', '구로구', '금천구', '영등포구', '동작구', '관악구', '서초구', '강남구', '송파구', '강동구']
+          re_year = df_year_list2[year_idx]
+          re_region = df_region_list2[region_idx]
+          result_str=[]
+          // result_str = '년도:'+str(re_year)+', 자치구:'+str(re_region)+', 유기견 수:'+vals[2]
+          header_str = '<div>'
+                       +'  <span>구별 유기견 수</span>'
+                       +'  <br>'
+                       
+          result_str = header_str + params.marker + '<br>' + '- 년도 : '+re_year+'<br>'+'- 자치구 : '+re_region+' <br>'+'- 유기견 수 : '+vals[2]+'마리 <br></div>'
+          return result_str
+        }
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

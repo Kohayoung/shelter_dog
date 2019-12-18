@@ -35,7 +35,19 @@ def hello():
 
 @app.route("/md")
 def materialDesign():
-    return render_template('md_index.html')
+    _bar = bar_3d_chart()
+    javascript_snippet = TRANSLATOR.translate(_bar.options)
+    return render_template(
+        "md_gd.html",
+        chart_id=_bar.chart_id,
+        host=REMOTE_HOST,
+        renderer=_bar.renderer,
+        my_width="100%",
+        my_height=1000,
+        custom_function=javascript_snippet.function_snippet,
+        options=javascript_snippet.option_snippet,
+        script_list=_bar.get_js_dependencies(),
+    )
 
 def getDataList():
     data_list=[]
