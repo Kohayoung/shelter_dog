@@ -42,7 +42,7 @@
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+        <a class="navbar-brand" href="https://http://127.0.0.1:5000/md">
           Shelter Dog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -72,7 +72,8 @@
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('/static/assets/img/bg2.jpg');">
+  <!-- <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('/static/assets/img/bg2.jpg');"> -->
+  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('/static/dog_walk.gif');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
@@ -121,6 +122,12 @@
 
             </p>
             <!-- <a href="#0" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <br><br>
+        <div class="card col-md-12" >
+          <img class="card-img-top" src="/static/dataset.png" alt="Card image cap">
+          <div class="card-body">
           </div>
         </div>
         <br><br>
@@ -183,13 +190,6 @@
           <div class="card-header card-header-success col-md-8">
             <h3>은평구 비교</h3>
           </div>
-          <img class="card-img-top" src="/static/graph/eun1.png" alt="Card image cap">
-          <div class="card-body">
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-          </div>
-        </div>
-        <br><br>
-        <div class="card col-md-12" >
           <img class="card-img-top" src="/static/graph/eun2.png" alt="Card image cap">
           <div class="card-body">
           </div>
@@ -203,6 +203,7 @@
         </div>
         <br><br> -->
         <div class="card col-md-12" >
+
           <img class="card-img-top" src="/static/graph/eun4.png" alt="Card image cap">
           <div class="card-body">
           </div>
@@ -230,12 +231,6 @@
           <div class="card-header card-header-success col-md-8">
             <h3>유기견 수가 최소, 최대인 구와 구 평균 비교</h3>
           </div>
-          <img class="card-img-top" src="/static/graph/compare1.png" alt="Card image cap">
-          <div class="card-body">
-          </div>
-        </div>
-        <br><br>
-        <div class="card col-md-12" >
           <img class="card-img-top" src="/static/graph/compare2.png" alt="Card image cap">
           <div class="card-body">
           </div>
@@ -243,12 +238,6 @@
         <br><br>
         <div class="card col-md-12" >
           <img class="card-img-top" src="/static/graph/compare3.png" alt="Card image cap">
-          <div class="card-body">
-          </div>
-        </div>
-        <br><br>
-        <div class="card col-md-12" >
-          <img class="card-img-top" src="/static/graph/compare4.png" alt="Card image cap">
           <div class="card-body">
           </div>
         </div>
@@ -331,8 +320,8 @@
                       <div class="card">
                         <div class="card-body">
                           <!-- <h4 class="card-title">Gradient Boosting</h4> -->
-                          <p class="card-text">Gradient Boosting를 이용해 어떤 요인들이 유기견 수에 지대한 영향을 미치는지 확인해보았다.</p>
-                          <p class="card-text">가장 많은 영향을 끼치는 요인은 70대 이상 사람의 수이다.</p>
+                          <p class="card-text">Gradient Boosting를 이용해 어떤 요인들이 유기견 수에 지대한 영향을 미치는지 확인해보았습니다.</p>
+                          <p class="card-text">가장 많은 영향을 끼치는 요인은 70대 이상 사람의 수입니다.</p>
                           <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         </div>
                         <img class="card-img-bottom" src="/static/graph/gd1.png" alt="Card image cap">
@@ -344,8 +333,9 @@
                           <div class="card-body">
                             <!-- <h4 class="card-title">Gradient Boosting</h4> -->
                             <!-- <br> -->
-                            <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
-                            <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                            <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았습니다.</p>
+                            <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났습니다.</p>
+                            <p class="card-text">이 결과로 나이대가 유기견 수 증감에 영향이 크다는 것을 유추할 수 있었습니다.</p>
                             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                           </div>
                           <img class="card-img-bottom" src="/static/graph/gd2.png" alt="Card image cap">
@@ -356,11 +346,10 @@
                         <div class="card-body">
                           <!-- <h4 class="card-title">Gradient Boosting</h4> -->
                           <!-- <br> -->
-                          <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
-                          <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                          <p class="card-text">영향이 적은 컬럼들은 제외시켜가면서 다시 학습 시켜보았습니다.</p>
                           <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         </div>
-                        <img class="card-img-bottom" src="/static/graph/gd3.png" alt="Card image cap">
+                        <img class="card-img-bottom" src="/static/graph/gd4.png" alt="Card image cap">
                       </div>
                     </div>
                     <div class="tab-pane" id="gd_fou">
@@ -368,11 +357,10 @@
                         <div class="card-body">
                           <!-- <h4 class="card-title">Gradient Boosting</h4> -->
                           <!-- <br> -->
-                          <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
-                          <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                          <p class="card-text">영향이 적은 컬럼들은 제외시켜가면서 다시 학습 시켜보았습니다.</p>
                           <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         </div>
-                        <img class="card-img-bottom" src="/static/graph/gd4.png" alt="Card image cap">
+                        <img class="card-img-bottom" src="/static/graph/gd6.png" alt="Card image cap">
                       </div>
                     </div>
                     <div class="tab-pane" id="gd_fif">
@@ -380,8 +368,8 @@
                         <div class="card-body">
                           <!-- <h4 class="card-title">Gradient Boosting</h4> -->
                           <!-- <br> -->
-                          <p class="card-text">70대 이상 인구수가 너무 큰 영향을 미치기 때문에 해당 요인을 제거하고 다시 Gradient Boosting을 실행해 보았다.</p>
-                          <p class="card-text">해당 요인을 제거하니 60대 인구수가 가장큰 요인으로 나타났다.</p>
+                          <p class="card-text">60대까지 제외하여 학습 시켰으나 그 다음 연령대가 높은 50대가 중요한 요인으로 나타났습니다.</p>
+                          <p class="card-text">이 학습 결과를 보면 자치구의 연령대 요인이 유기견 수의 증감에 지대한 영향을 끼침을 알 수 있었습니다.</p>
                           <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         </div>
                         <img class="card-img-bottom" src="/static/graph/gd8.png" alt="Card image cap">
@@ -418,6 +406,7 @@
                 <h4>연령대가 낮을수록 유기발생률이 높은 것으로 볼 수 있습니다. </h4>  
             </p>
             <!-- <a href="#0" class="btn btn-primary">Go somewhere</a> -->
+            <!-- <img class="card-img-bottom" src="/static/dog_walk.gif" alt="Card image cap"> -->
           </div>
         </div>
       </div>
